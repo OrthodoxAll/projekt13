@@ -2,5 +2,5 @@ def foo()
     pass
 
 
-def bar(func);
-    ...
+def bar();
+    pass
