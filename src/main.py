@@ -14,10 +14,15 @@ def find_max(my_list):
     return 0
 
 
+def divider(x, y):
+    if y == 0:
+        raise ZeroDivisionError('Деление на ноль невозможно')
+    return x / y
+
 
 if __name__ == '__main__':
     assert add_numbers(1, 2) == 3
 
     assert is_even(0) == True
 
-    assert find_max([]) == 5
+    assert find_max([]) == 0
