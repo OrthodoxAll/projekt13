@@ -1,22 +1,5 @@
-def add_numbers(num1, num2):
-    return num1 + num2
-
-
-
-def is_even(num):
-    return num % 2 == 0
-
-
-
-def find_max(my_list):
-    if len(my_list) > 0:
-         return max(my_list)
-    return 0
-
-
 def divider(x, y):
-    if y == 0:
-        raise ZeroDivisionError('Деление на ноль невозможно')
+
     return x / y
 
 
