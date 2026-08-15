@@ -1,4 +1,4 @@
-from src.main import divider
+from Project13\src\main.pyimport divider
 
 def test_devider():
     assert divider(2,1) == 6
