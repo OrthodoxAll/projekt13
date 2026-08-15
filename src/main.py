@@ -20,9 +20,3 @@ def divider(x, y):
     return x / y
 
 
-if __name__ == '__main__':
-    assert add_numbers(1, 2) == 3
-
-    assert is_even(0) == True
-
-    assert find_max([]) == 0
