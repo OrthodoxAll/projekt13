@@ -4,5 +4,5 @@ def divider(x, y):
     return 0
 
 
-def rreverse_strring(my_string):
+def reverse_strring(my_string):
     return my_string[::-1]
