@@ -1,3 +1,4 @@
+import math
 import random
 from itertools import chain
 
@@ -171,12 +172,36 @@ print(numbers)
 
 
 def filter_order_by_coast(file_iter, coast):
-    raw_header = next(file_iter)
- #   print(raw_header)
+    raw_header = next(file_iter) #client_id, order_id, order_
+    rows = [row.split(',') for row in file_iter]
+    clients = [float(row[0].rstrip()) for row in rows]
+    order = [float(row[1].rstrip()) for row in rows]
+    cost = [float(row[2].rstrip()) for row in rows]
+
+    indexses = [i for i, x in enumerate(cost)]
+    indexses = list(filter(lambda x :cost[x] >= coast, indexses))
+
+    return [f'{clients[i]}, {order [i]}, {cost[i]}' for i in indexses]
 
 
+
+def clear_and_sum():
+    with open("nums.txt", 'r') as file:
+        rows = (row.split('#')[0].rstrip() for row in file)
+        nums = ( float(n) for n in rows if n != '')
+        nums = (n for n in nums if math.isfinite(n))
+        nums = (max(0.,n) for n in nums)
+        total_sum = sum(nums)
+        return f'the sum is {total_sum}'
+
+
+
+#the sum is 15.0
 
 if __name__ == '__main__':
-    with open(task11_11.csv, 'r') as f:
+    with open("task11_11.csv", 'r') as f:
         result = filter_order_by_coast(f, 20)
-print(result)
+
+    print(result)
+    print('#'*10)
+    print(clear_and_sum())
