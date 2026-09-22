@@ -10,6 +10,9 @@ BASE_URL = os.getenv("BASE_URL")
 
 
 
+
+
+
 def get_news(query:str,exclude_words:list, api_key = API_KEY) -> list:
     today = datetime.datetime.today()
     params = {
