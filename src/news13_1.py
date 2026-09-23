@@ -3,7 +3,7 @@ from src.safe_to_file import safe_to_file
 import datetime
 import logging
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger('News13')
 logger.setLevel(logging.INFO)
 file_handler = logging.FileHandler('E:/Digital/bakend_programm/Project13/logs/news13_1.log', encoding= 'utf-8')
 file_formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s: - %(message)s')

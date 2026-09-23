@@ -69,5 +69,5 @@ def get_news(query:str,exclude_words:list, api_key = API_KEY) -> list:
         logger.error(f'Произошла ошибка: {ex}')
         return []
     except Exception as ex:
-        logger.error(f'Произошла ошибка: {ex}')
+        logger.error(f'Произошла ошибка 2: {ex}')
         return []
