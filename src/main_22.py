@@ -4,19 +4,22 @@ class Employee:
     pay: int
     email: str
 
-    def __init__(self,name,surname,pay,email):
+    def __init__(self,name,surname,pay):
         self.name = name
         self.surname = surname
         self.pay = pay
         self.email = f'{self.name}.{self.surname}@mail.com'
 
-    def fullname(self):
-        """Метод, который возвращает полное имя сотрудника."""
-        return f'{self.name} {self.surname}'  # self позволяет использовать данные конкретного экземпляра
+    def work(self):
+        print('Do siome work')
 
-emp_1 = Employee('John','Smith',5000,'')
-print(emp_1.name)
-print(emp_1.surname)
-print(emp_1.pay)
-print(emp_1.email)
-print(emp_1.fullname())
+    def go_to_vacation(self):
+        print('Do siome go to vacation')
+
+if __name__ == '__main__':
+    emp1 = Employee('James','Smith',100)
+    print(emp1)
+    print(emp1.name)
+    print(emp1.surname)
+    print(emp1.pay)
+    print(emp1.email)
