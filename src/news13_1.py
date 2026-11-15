@@ -26,7 +26,7 @@ def news():
         logger.info('Запись новостей в файл')
 
         file_name = f'{today_string}_{query.replace(" ","_")}.json'
-        file_path = f'E:/Digital/bakend_programm/Project13/news/{file_name}'
+        file_path = f'/data/{file_name}'
         safe_to_file(articles_list,file_path)
     except Exception as e:
         logger.error(f"Ошибка : {e}")
